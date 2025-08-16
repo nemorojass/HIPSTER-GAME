@@ -1,43 +1,41 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Redirecting to Spotify...</title>
-    </head>
-    <body>
-        <h1>Loading your song...</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Spotify...</title>
+</head>
+<body>
+    <h1>Loading your song...</h1>
 
-        <script>
-            // Get the full query string from the current URL (e.g., "?song=6vrUTGn5p8IrfTZ0J6sIVM")
-            const queryString = window.location.search;
-            const urlParams = new URLSearchParams(queryString);
-            const songId = urlParams.get('song');
+    <script>
+        // Get the full query string from the current URL (e.g., "?song=6vrUTGn5p8IrfTZ0J6sIVM")
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const songId = urlParams.get('song');
 
-            // Log the found song ID for debugging purposes
-            console.log("Found song ID:", songId);
+        // Log the found song ID for debugging purposes
+        console.log("Found song ID:", songId);
 
-            if (songId) {
-                // Construct the direct Spotify URL for the track
-                const spotifyUrl = `https://open.spotify.com/track/${songId}`;
-                
-                // Log the URL we are about to redirect to
-                console.log("Redirecting to Spotify URL:", spotifyUrl);
-                
-                // Perform the immediate redirect
-                window.location.href = spotifyUrl;
-            } else {
-                // If no song ID is found in the URL, display an error message
-                console.error("Error: No song ID found in the URL.");
-                document.body.innerHTML = `
-                    <h1>Error: Song Not Found!</h1>
-                    <p>No Spotify song ID was provided in the URL.</p>
-                    <p>Please ensure your QR code links to a URL like: <code>/play.html?song=YOUR_SONG_ID</code></p>
-                    <!-- IMPORTANT: Replace 'HIPSTER-Game' below with your NEW repository name -->
-                    <p>You can test from your main page: <a href="https://nemorojass.github.io/HIPSTER-Game/" style="color: blue; text-decoration: underline;">nemorojass.github.io/HIPSTER-Game/</a></p>
-                `;
-            }
-        </script>
-    </body>
-    </html>
-    
+        if (songId) {
+            // Construct the direct Spotify URL for the track
+            const spotifyUrl = `https://open.spotify.com/track/${songId}`;
+            
+            // Log the URL we are about to redirect to
+            console.log("Redirecting to Spotify URL:", spotifyUrl);
+            
+            // Perform the immediate redirect
+            window.location.href = spotifyUrl;
+        } else {
+            // If no song ID is found in the URL, display an error message
+            console.error("Error: No song ID found in the URL.");
+            document.body.innerHTML = `
+                <h1>Error: Song Not Found!</h1>
+                <p>No Spotify song ID was provided in the URL.</p>
+                <p>Please ensure your QR code links to a URL like: <code>/play.html?song=YOUR_SONG_ID</code></p>
+                <p>You can test from your main page: <a href="https://nemorojass.github.io/HIPSTER-GAME/" style="color: blue; text-decoration: underline;">nemorojass.github.io/HIPSTER-GAME/</a></p>
+            `;
+        }
+    </script>
+</body>
+</html>
