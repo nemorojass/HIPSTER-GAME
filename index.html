@@ -1,0 +1,44 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HIPSTER - Your Music Game</title>
+        <!-- Tailwind CSS for styling -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            /* Custom font for a more unique look */
+            body {
+                font-family: "Inter", sans-serif;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-4">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-xl text-center max-w-md w-full">
+            <h1 class="text-4xl font-bold mb-4 text-purple-400">Welcome to HIPSTER! 🎵</h1>
+            <p class="text-lg mb-6">Scan a QR code from your HIPSTER card to instantly play a song on Spotify!</p>
+            
+            <div class="mb-8">
+                <h2 class="text-2xl font-semibold mb-3 text-blue-300">How it works:</h2>
+                <ol class="list-decimal list-inside text-left mx-auto max-w-xs space-y-2">
+                    <li>Generate a QR code for a link like this:</li>
+                    <li class="break-all bg-gray-700 p-2 rounded-md text-sm">
+                        <!-- IMPORTANT: Replace 'HIPSTER-Game' below with your NEW repository name -->
+                        <code>https://nemorojass.github.io/HIPSTER-Game/play.html?song=6vrUTGn5p8IrfTZ0J6sIVM</code>
+                    </li>
+                    <li>The <code>song=</code> part should be the Spotify track ID.</li>
+                    <li>When someone scans the QR code, your device will open the song directly in Spotify!</li>
+                </ol>
+            </div>
+            <p class="text-sm text-gray-400">
+                For testing, you can click the example link below (it will redirect you to "Iris" by The Goo Goo Dolls):
+            </p>
+            <!-- IMPORTANT: Replace 'HIPSTER-Game' below with your NEW repository name -->
+            <a href="/HIPSTER-Game/play.html?song=6vrUTGn5p8IrfTZ0J6sIVM" 
+               class="mt-6 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                Test "Iris" on Spotify
+            </a>
+        </div>
+    </body>
+    </html>
+    
